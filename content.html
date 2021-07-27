@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Otomanopee+One&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet"> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.goo   gleapis.com/css2?family=PT+Sans&display=swap" rel="stylesheet"> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet"> 
+    <script type="text/javascript" src="./content.js"></script>
+    <script type="text/javascript">
+        window.onload=newColor;
+    </script>
+        
+    <title>Build Your Resume</title>
+</head>
+<body>
+    <div class="form" id="form">
+        <form action="POST">
+            <div class='ip'>
+                <div class="onlyname">
+                    <label class="col-25" for="whyname">Name</label>
+                    <input class="col-75" id="whyname" type="text" placeholder="Enter your Name" onkeyup="whyName()" autocomplete="off"><br>
+                </div>
+            </div>
+
+            <div class="personalinfo" id="personalinfo">
+                <h4 id="headpersonalinfo">Personal Info</h4>
+
+                <div class='ip'> 
+                    <label class="col-25" for="whycontact">Contact Number</label>
+                    <input class="col-75" id="whycontact" type="tel" placeholder="Enter your Contact Number" onkeyup="whyNumber()" autocomplete="off"><br>
+                </div>
+                <div class='ip'>
+                    <label class="col-25" for="whyemail">Email</label>
+                    <input class="col-75" id="whyemail" type="email" placeholder="Enter your Email ID" onkeyup="whyEmail()" autocomplete="off"><br>
+                </div>
+
+                <div class='ip'>
+                    <label class="col-25" for="whygithub">Github Profile</label>
+                    <input class="col-75" id="whygithub" type="url" placeholder="Enter your Github Profile" onkeyup="whyGithub()" autocomplete="off"><br>
+                </div>
+            
+                <div class='ip'>
+                    <label class="col-25" for="whylinkedin">Linkdin Profile</label>
+                    <input class="col-75" id="whylinkedin" type="url" placeholder="Enter your Linkedin Profile" onkeyup="whyLinkedin()" autocomplete="off"><br>
+                </div>
+            </div>
+            <div class='skills' id='skills'>
+                <h4 id="headskills">Skills</h4>
+                <button type="button" class='add' onclick='addInput()'>Add Skill</button>
+                <button type="button" class='add' onclick='submitSkill()'>Submit</button>
+
+            </div>
+            <div class='interests' id='interests'>
+                <h4 id="headinterests">Interests</h4>
+                    <button type="button" class='add' onclick='addInputInt()'>Add Interest</button>
+                    <button type="button" class='add' onclick='submitInterest()'>Submit</button>
+            </div>
+
+            <div id="summ" class="summ">
+                <h4 id="headsummary">Summary</h4>
+                <textarea name="" id="ta" cols="85" rows="10" onkeyup="tas()" autocomplete="off"></textarea>
+            </div>
+            
+            <div id="edu" class="edu">
+                <h4 id="headeducation">Education</h4>
+                <button type="button" class="addedu" onclick="eduadd()">Add Course</button><br>
+                <button type="button" class='addedu' onclick='submitEducation()'>Submit</button>
+            </div>
+
+            <div id="work" class="work">
+                <h4 id="headwork">Work Experience</h4>
+                <button type="button" class="addwork" onclick="workadd()">Add Experience</button><br>
+                <button type="button" class="addwork" onclick='submitWork()'>Submit</button>
+            </div>
+
+            <div id="project" class="project">
+                <h4 id="headproject">Projects</h4>
+                <p id='w'>Note  : Keep page length in mind while adding projects</p>
+                <button type="button" class="addproject" onclick="projectadd()">Add Projects</button><br>
+                <button type="button" class="addproject" onclick='submitProject()'>Submit</button>
+            </div>
+
+            <div id="cert" class="cert">
+                <h4 id="headcert">Certificates and Membership</h4>
+                <button type="button" class="addcert1" onclick="certadd()">Add Certificates</button><br>
+                <button type="button" class="addcert2" onclick='submitCert()'>Submit</button>
+            </div>
+            <p class='war'>(Note : While saving as pdf, keep margin value as None and paper as A4.)</p>
+
+            <a href='./preview.html'>
+                <button type="button" onclick="copy()" id='prebtn'>Download</button>
+            </a>
+            
+        </form>
+    
+    </div>
+    <div class='preview' id='preview'>
+        <div class='cnt'></div>
+        <div class='resume'>
+            <div class="side" id='side'>
+                <h4 id='name'>&nbsp Aditya</h4>
+                <h5 id='head'>&nbsp Personal Info</h5>
+                <h6>&nbsp Contact Number</h6>
+                <p id='contact'>&nbsp 987456</p>
+                <h6>&nbsp Email</h6>
+                <p id="email">&nbsp example@example.com</p>
+                <h6>&nbsp Github Profile</h6>
+                <p id="github">&nbsp github.com/example</p>
+                <h6>&nbsp Linkdin Profile</h6>
+                <p id="linkedin">&nbsp linkdin.com/example</p>
+    
+                <span id = 'iptskl'>
+                    <h5 id='head'>&nbsp Skills</h5>
+                </span>
+                <span id='iptint'>
+                    <h5 id='head'>&nbsp Interests</h5>
+                </span>
+    
+            </div>
+            <div class="main" id="main">
+                <p id="qul">
+                    Lorem ipsum dolor sit amet consectetur adipisicing 
+                    elit. Qui error, ipsum neque dolorem, rem architecto 
+                    accusantium magnam rerum quam, totam harum tenetur porro
+                     at eveniet tempore aliquam quisquam illo delectus!
+                </p>
+                <hr id="up1">
+                <h5 id='mainhead'>Education</h5>
+                <hr id="down1">
+                <table id="table">
+                    
+                </table>
+    
+                <hr id="up2">
+                <h5 id="mainhead">Work Experience</h5>
+                <hr id="down2">
+                <table id="tablework">
+                    
+                </table>
+                <hr id="up3">
+                <h5 id="mainhead">Projects</h5>
+                <hr id="down3">
+                <div id='prjct'>
+
+                </div>
+                <hr id="up4">
+                <h5 id="mainhead">Certificates and Membership</h5>
+                <hr id="down4">
+                <div id='certmem'>
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+    <style>
+ 
+        body{
+            margin: 0;
+            width: 100%;
+            height: 100vh;
+        }
+        #form{
+            display: float;
+            float: left;
+            width: 50%;
+            height: auto;
+            background: rgb(14,20,10);
+        }    
+        #preview{
+            position: fixed;
+            transform: translateX(100%);
+            width: 50%;
+            height: 100%;
+            background-color: rgb(14,20,10);
+        }
+
+        h3{
+            text-align: center;
+            font-family: 'Roboto', 'PT Sans', 'sans-serif' !important;
+            margin-bottom: 3px;
+         }
+         #head{
+            overflow: hidden;
+            font-size: 11px;
+            color: white;
+            font-family: 'PT Sans', sans-serif;
+            margin-bottom: 0;
+            background: #192734;
+         }
+         #main{
+             display: float;
+             position: float-left;
+             height: 100%;
+             width: 67%;
+         }
+         #up1{
+             margin: 5px 2px 0px 6px;
+             height: 1px;
+             background-color: black;
+             border: none; 
+             opacity: 0.3;
+         }
+         #down1{
+             margin: 1px 2px 2px 6px;
+             height: 1px;
+             background-color: black;
+             border: none; 
+             opacity: 0.3;
+         }
+         #up2{
+             margin: 0px 2px 0px 6px;
+             height: 1px;
+             background-color: black;
+             border: none; 
+             opacity: 0.3;
+         }
+         #down2{
+             margin: 1px 2px 2px 6px;
+             height: 1px;
+             background-color: black;
+             border: none; 
+             opacity: 0.3;
+         }
+         #up3{
+             margin: 5px 2px 0px 6px;
+             height: 1px;
+             background-color: black;
+             border: none; 
+             opacity: 0.3;
+         }
+         #down3{
+             margin: 1px 2px 2px 6px;
+             height: 1px;
+             background-color: black;
+             border: none; 
+             opacity: 0.3;
+         }
+         #up4{
+             margin: 5px 2px 0px 6px;
+             height: 1px;
+             background-color: black;
+             border: none; 
+             opacity: 0.3;
+         }
+         #down4{
+             margin: 1px 2px 2px 6px;
+             height: 1px;
+             background-color: black;
+             border: none; 
+             opacity: 0.3;
+         }
+         h6{
+             margin-top: 3px;
+             color: white;
+             font-size: 8px;
+             margin-bottom: 3px;
+             font-family: 'Roboto', 'PT Sans', 'sans-serif' !important;
+         }
+         p{
+             color: white;
+             font-size: 7px;
+             margin: 3px 0 3px 0;
+             font-family: 'Roboto', 'PT Sans', 'sans-serif' !important;
+         }
+         a{
+             text-decoration: none;
+         }
+         .colors{
+             display: flex;
+             justify-content: center;
+         }
+         input[type=radio]{
+             cursor: pointer;
+             width: 50px;
+             height: 40px;
+             border: 3px solid white;
+             padding: 0.5em;
+             -webkit-appearance: none;
+         }
+         input[t]
+         input[type=radio]:first-child{
+             background: #164d56;
+         }
+         input[type=radio]:nth-child(2){
+             background: #46344e;
+         }
+         input[type=radio]:nth-child(3){
+             background: #50212f;
+         }
+         input[type=radio]:nth-child(4){
+             background: #605b56;
+         }
+         .resume{
+             overflow: hidden;
+             display: flex;
+             margin: 0 auto 0 auto;
+             margin-top: 2%;
+             height: 451px;
+             width: 320px;
+             background: #fff;
+         }
+         #side{
+             width: 33%;
+             height: 100%;
+             background: #164d56;
+         }
+         h4{
+             overflow: hidden;
+             font-size: 12px;
+             color: white;
+             font-family: 'Roboto', 'PT Sans', 'sans-serif' !important;
+         }
+         #next{
+             width: 80px;
+             height: 30px;
+             display: flex;
+             margin: 8px auto 0 auto;
+             padding-top: 4px;
+             justify-content: center;
+             background: #53c586;
+             border: black 1px solid;
+             border-radius: 10px;
+             transition-duration: 250ms; 
+         }
+         #next:hover{
+             cursor: pointer;
+             transform: scale(1.1);
+         }
+         #qul{
+            font-family: 'Roboto', 'PT Sans', 'sans-serif' !important;
+            color: black;
+            margin: 20px 4px 0 6px;
+            text-align: justify;
+            word-wrap: break-word;
+         }
+         #mainhead{
+            padding: 0px 0 0px 0;
+            font-size: 11px;
+            font-family: 'PT Sans', sans-serif;
+            margin: 0px 4px 0 6px;
+         }
+        #table{
+            margin: 0px 6px 0 3px;
+            width: 100%;
+            height: 15%;
+            font-family: 'PT Sans', sans-serif;
+            font-size: 7px;
+        }
+        #tablework{
+            margin: 0px 6px 0 3px;
+            width: 100%;
+            height: 15%;
+            font-family: 'PT Sans', sans-serif;
+            font-size: 7px;
+        }
+        ul{
+            margin: 0;
+            padding: 0 0 0 15px;
+        }  
+        #cell{
+            vertical-align: top;
+        }
+        .year{
+            width: 20%;
+        }
+        #prjct{
+            font-size: 7px;
+            font-family: 'Roboto', 'PT Sans', 'sans-serif' !important;
+            margin: 5px 4px 0 6px;
+
+        }
+        .resume{
+            margin-top: 10%;
+            transform: scale(1.30);
+        }
+        .col-25{
+            float: left;
+            width: 20%;
+            color: white;
+        }
+        .col-75{
+            float: left;
+            width: 70%;
+        }
+        label{
+            margin-bottom: 11px;
+        }
+        .ip{
+            margin: 20px;
+        }
+        input[type=text], [type=tel], [type='url'], [type=email]{
+            height: 20px;
+            width: 65%;
+            margin-bottom: 5px;
+        }
+        #personalinfo{
+            padding: 10px;
+            width: 95%;
+            margin:auto;
+            border: 3px #d3d3d3 solid;
+            border-radius: 20px;
+        }
+        #headpersonalinfo{
+            color: white;
+            font-size: 18px;
+            width: 20%;
+            margin: 0 3% 0 3%;
+            padding-left: 3%;
+            margin-top: -3.5%;
+            background: rgb(14,20,10);
+        }
+        .onlyname{
+            margin: auto;
+            width: 95%;
+            margin-bottom: 40px;
+        }
+        #skills{
+            padding: 10px;
+            width: 95%;
+            margin:auto;
+            margin-top: 5%;
+            border: 3px #d3d3d3 solid;
+            border-radius: 12px;
+        }
+        #headskills{
+            color: white;
+            font-size: 18px;
+            width: 10%;
+            margin: 2% 3% 0 3%;
+            padding-left: 3%;
+            margin-top: -3.5%;
+            background: rgb(14,20,10);
+        }
+        .skillInputBtn{
+            margin: 2% 0 0 0;
+        }
+        #interests{
+            padding: 10px;
+            width: 95%;
+            margin:auto;
+            margin-top: 5%;
+            border: 3px #d3d3d3 solid;
+            border-radius: 12px;
+        }
+        #headinterests{
+            color: white;
+            font-size: 18px;
+            width: 14%;
+            margin: 2% 3% 0 3%;
+            padding-left: 3%;
+            margin-top: -3.5%;
+            background: rgb(14,20,10);
+        }
+        .add{
+            width: 200px;
+            height: 40px;
+            border-radius: 0;
+            border: 4px rgb(14,20,10) solid;
+            display: table-cell;
+            margin: 0 33% 0 33%;
+            vertical-align: middle;
+            background: #42cc8c;
+            cursor: pointer;
+        }
+        .add:hover{
+            color: #fff;
+            border: white 2px solid; 
+            background: #42cc8c;
+        }
+        .interestInputBtn{
+            margin: 2% 0 0 0;
+        }
+        #summ{
+            padding: 10px;
+            width: 95%;
+            margin:auto;
+            margin-top: 5%;
+            border: 3px #d3d3d3 solid;
+            border-radius: 12px;
+        }
+        #ta{
+            width: 95%;
+            display: flex;
+            margin: auto;
+            margin-top: 10px;
+        }
+        #headsummary{
+            color: white;
+            font-size: 18px;
+            width: 14%;
+            margin: 2% 3% 0 3%;
+            padding-left: 3%;
+            margin-top: -3.5%;
+            background: rgb(14,20,10);
+        }
+        #headeducation{
+            color: white;
+            font-size: 18px;
+            width: 18%;
+            margin: 2% 3% 0 3%;
+            padding-left: 3%;
+            margin-top: -3.5%;
+            background: rgb(14,20,10);
+        }
+        #email{
+            word-wrap: break-word;
+            margin-left: 1px;
+        }
+        #github{
+            margin-left: 1px;
+            word-wrap: break-word;
+        }
+        #linkedin{
+            margin-left: 1px;
+            word-wrap: break-word;
+        }
+        #contact{
+            margin-left: 1px;
+            word-wrap: break-word;
+        }
+        #edu{
+            padding: 10px;
+            width: 95%;
+            margin:auto;
+            margin-top: 5%;
+            border: 3px #d3d3d3 solid;
+            border-radius: 12px;
+        }
+        .addedu{
+            width: 200px;
+            height: 40px;
+            border-radius: 0;
+            border: 4px rgb(14,20,10) solid;
+            display: table-cell;
+            margin: 0 33% 0 33%;
+            vertical-align: middle;
+            background: #42cc8c;
+            cursor: pointer;
+        }
+        .addedu:hover{
+            color: #fff;
+            border: white 2px solid;
+        }
+        #work{
+            padding: 10px;
+            width: 95%;
+            margin:auto;
+            margin-top: 5%;
+            border: 3px #d3d3d3 solid;
+            border-radius: 12px;
+        }
+        .addwork{
+            width: 200px;
+            height: 40px;
+            border-radius: 0;
+            border: 4px rgb(14,20,10) solid;
+            display: table-cell;
+            margin: 0 33% 0 33%;
+            vertical-align: middle;
+            background: #42cc8c;
+            cursor: pointer;
+        }
+        .addwork:hover{
+            color: #fff;
+            border: white 2px solid;
+        }
+        #headwork{
+            color: white;
+            font-size: 18px;
+            width: 25%;
+            margin: 0 3% 0 3%;
+            padding-left: 3%;
+            margin-top: -3.5%;
+            background: rgb(14,20,10);
+        }
+        #project{
+            padding: 10px;
+            width: 95%;
+            margin:auto;
+            margin-top: 5%;
+            border: 3px #d3d3d3 solid;
+            border-radius: 12px;
+        }
+        .addproject{
+            width: 200px;
+            height: 40px;
+            border-radius: 0;
+            border: 4px rgb(14,20,10) solid;
+            display: table-cell;
+            margin: 0 33% 0 33%;
+            vertical-align: middle;
+            background: #42cc8c;
+            cursor: pointer;
+        }
+        .addproject:hover{
+            color: #fff;
+            border: white 2px solid;        }
+        #headproject{
+            color: white;
+            font-size: 18px;
+            width: 13%;
+            margin: 0 3% 0 3%;
+            padding-left: 3%;
+            margin-top: -3.5%;
+            background: rgb(14,20,10);
+        }
+        #cert{
+            padding: 10px;
+            width: 95%;
+            margin:auto;
+            margin-top: 5%;
+            border: 3px #d3d3d3 solid;
+            border-radius: 12px;
+        }
+        .addcert1{
+            width: 200px;
+            height: 40px;
+            border-radius: 0;
+            border: 4px rgb(14,20,10) solid;
+            display: table-cell;
+            margin: 0 33% 0 33%;
+            vertical-align: middle;
+            background: #42cc8c;
+            cursor: pointer;
+        }
+        .addcert2{
+            width: 200px;
+            height: 40px;
+            border-radius: 0;
+            border: 4px rgb(14,20,10) solid;
+            display: table-cell;
+            margin: 0 33% 0 33%;
+            vertical-align: middle;
+            background: #42cc8c;
+            cursor: pointer;
+        }
+        .addcert1:hover{
+            color: #fff;
+            border: white 2px solid;     
+           }
+        .addcert2:hover{
+            color: #fff;
+            border: white 2px solid;      
+          }
+        #headcert{
+            color: white;
+            font-size: 18px;
+            width: 42%;
+            margin: 0 3% 0 3%;
+            padding-left: 3%;
+            margin-top: -3.5%;
+            background: rgb(14,20,10);
+        }
+        #certmem{
+            font-family: 'Roboto', 'PT Sans', 'sans-serif' !important;
+            overflow: hidden;
+        }
+        #w{
+            color: white;
+            font-size: 10px;    
+        }
+        #certmem{
+            margin: 5px 4px 0 6px;
+        }
+        #prebtn{
+            margin: 5% 50% 2% 45%;
+        }
+        .war{
+            padding: 5px;
+            color: white;
+            font-size:14px;
+        }
+        #prebtn{
+             width: 160px;
+             height: 40px;
+             font-size: 20px;
+             line-height: 1;
+             display: flex;
+             margin: 8px auto 30px auto;
+             padding-top: 9px;
+             justify-content: center;
+             background: rgb(14,20,10);
+             color: #19bc8b;
+             transition-duration: 250ms; 
+             border: 2px solid;
+             box-shadow: 
+                    0.3em 0.3em 0 0 #19bc8b,
+                    inset 0.3em 0.3em 0 0 #19bc8b;
+         }
+         #prebtn:hover{
+            cursor: pointer;
+            transform: scale(1.1);
+            background: #19bc8b;
+            color: rgb(14,20,10);  
+            }
+        input{
+            background: #e0e0e0;
+        }
+        textarea{
+            background: #e0e0e0;
+            font-family: 'Roboto', 'PT Sans', 'sans-serif' !important;
+
+        }
+        h5{
+            font-family: 'Roboto', 'PT Sans', 'sans-serif' !important;
+        }
+        table{
+            font-family: 'Roboto', 'PT Sans', 'sans-serif' !important;
+
+        }
+
+    </style>
+</body>
+</html>

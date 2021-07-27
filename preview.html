@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Otomanopee+One&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet"> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.goo   gleapis.com/css2?family=PT+Sans&display=swap" rel="stylesheet"> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <script src="./content.js"></script>
+    <script>
+        window.onload = test;
+    </script>
+    <title>Preview</title>
+</head>
+<body>
+    <div class='element-to-print' id='prpage'>
+        
+    </div>
+    <style>
+        body{
+            width: 21cm;
+            height: 29.7cm;
+            margin: 0%;
+            padding: 0;
+            background: #e0e0e0;
+            display: flex;
+            margin: auto;
+        }
+        .element-to-print{
+            transform: scale(1);
+            height: 100%;
+            width: 100%;
+
+        }
+        #down{
+            margin-top: 30cm;
+            margin-left: -50%;
+        }
+        .resume{
+             overflow: hidden;
+             display: flex;
+             margin: 0 auto 0 auto;
+             /* margin-top: 2%; */
+             height: 451px;
+             width: 320px;
+             background: #fff;
+             transform: scale(2.48);
+             transform-origin: top center;
+             -webkit-print-color-adjust: exact;
+         }
+         #side{
+             width: 33%;
+             height: 100%;
+             background: #164d56;
+             -webkit-print-color-adjust: exact;
+         }
+         #head{
+            overflow: hidden;
+            font-size: 11px;
+            color: white;
+            font-family: 'PT Sans', sans-serif;
+            margin-bottom: 0;
+            background: #192734;
+            -webkit-print-color-adjust: exact;
+         }
+         #email{
+            word-wrap: break-word;
+            margin-left: 1px;
+        }
+        #github{
+            margin-left: 1px;
+            word-wrap: break-word;
+        }
+        #linkedin{
+            margin-left: 1px;
+            word-wrap: break-word;
+        }
+        #contact{
+            margin-left: 1px;
+            word-wrap: break-word;
+        }
+        h3{
+            text-align: center;
+            font-family: 'Otomanopee One', sans-serif;
+            margin-bottom: 3px;
+         }
+         h6{
+             margin-top: 3px;
+             color: white;
+             font-size: 8px;
+             margin-bottom: 3px;
+             font-family: 'PT Sans', sans-serif;
+         }
+         h4{
+             overflow: hidden;
+             font-size: 12px;
+             color: white;
+             font-family: 'PT Sans', sans-serif;
+         }
+         #main{
+             display: float;
+             position: float-left;
+             height: 100%;
+             width: 67%;
+         }
+         #qul{
+            font-family: 'Roboto', 'PT Sans', 'sans-serif' !important;
+            color: black;
+            margin: 20px 4px 0 6px;
+            text-align: justify;
+            word-wrap: break-word;
+         }
+         p{
+             color: white;
+             font-size: 7px;
+             margin: 3px 0 3px 0;
+             font-family: 'PT Sans', sans-serif;
+         }
+         #up1{
+             margin: 5px 2px 0px 6px;
+             height: 1px;
+             background-color: black;
+             border: none; 
+             opacity: 0.3;
+         }
+         #down1{
+             margin: 1px 2px 2px 6px;
+             height: 1px;
+             background-color: black;
+             border: none; 
+             opacity: 0.3;
+         }
+         #up2{
+             margin: 0px 2px 0px 6px;
+             height: 1px;
+             background-color: black;
+             border: none; 
+             opacity: 0.3;
+         }
+         #down2{
+             margin: 1px 2px 2px 6px;
+             height: 1px;
+             background-color: black;
+             border: none; 
+             opacity: 0.3;
+         }
+         #up3{
+             margin: 5px 2px 0px 6px;
+             height: 1px;
+             background-color: black;
+             border: none; 
+             opacity: 0.3;
+         }
+         #down3{
+             margin: 1px 2px 2px 6px;
+             height: 1px;
+             background-color: black;
+             border: none; 
+             opacity: 0.3;
+         }
+         #up4{
+             margin: 5px 2px 0px 6px;
+             height: 1px;
+             background-color: black;
+             border: none; 
+             opacity: 0.3;
+         }
+         #down4{
+             margin: 1px 2px 2px 6px;
+             height: 1px;
+             background-color: black;
+             border: none; 
+             opacity: 0.3;
+         }
+         #mainhead{
+            padding: 0px 0 0px 0;
+            font-size: 11px;
+            font-family: 'PT Sans', sans-serif;
+            margin: 0px 4px 0 6px;
+         }
+         #table{
+            margin: 0px 6px 0 3px;
+            width: 100%;
+            height: 15%;
+            font-family: 'PT Sans', sans-serif;
+            font-size: 7px;
+        }
+        #tablework{
+            margin: 0px 6px 0 3px;
+            width: 100%;
+            height: 15%;
+            font-family: 'PT Sans', sans-serif;
+            font-size: 7px;
+        }
+        ul{
+            margin: 0;
+            padding: 0 0 0 15px;
+        }  
+        #cell{
+            vertical-align: top;
+        }
+        .year{
+            width: 20%;
+        }
+        #prjct{
+            font-size: 7px;
+            font-family: 'PT Sans', sans-serif;
+            margin: 5px 4px 0 6px;
+
+        }
+        #certmem{
+            overflow: hidden;
+        }
+        #w{
+            color: black;
+            font-size: 10px;    
+        }
+        #certmem{
+            margin: 5px 4px 0 6px;
+        }
+
+    </style>
+    <script>
+        setTimeout(function(){
+            window.print();
+        },1000);
+    </script>
+</body>
+</html>

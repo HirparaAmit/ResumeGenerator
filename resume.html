@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Otomanopee+One&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet"> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand+SC&display=swap" rel="stylesheet"> 
+    <title>Engineering Resume</title>
+</head>
+<body>
+    <div class="intro">
+        <h1>Single Page Resume Generator</h1><br>
+        Make your resume now!
+    </div>
+    <div class='cnt'>
+        <h3>Pick Color of Your Choice</h3>
+        <div class="colors">
+            <input type="radio" onclick="colorChange()" id='blue', value='#164d56', name='myform'>  <!--#192734-->
+            <input type="radio" onclick="colorChange()" id='grey', value='#3a2229', name='myform'> <!--#7c6975-->
+            <input type="radio" onclick="colorChange()" id='coffee', value="#56565a", name='myform'> <!--#83637c-->
+            <input type="radio" onclick="colorChange()" id='skin', value="#1261a0", name='myform'> <!--#383f32-->
+        </div>
+        
+        <div class='resume'>
+            <div class="side" id='side'>
+                <h4 id='name'>&nbsp Aditya Singhania</h4>
+                <h5 id='head'>&nbsp Personal Info</h5>
+                <h6>&nbsp Contact Number</h6>
+                <p>&nbsp +911001001001</p>
+                <h6>&nbsp Email</h6>
+                <p>&nbsp example@protonmail.ch</p>
+                <h6>&nbsp Github Profile</h6>
+                <p>&nbsp github.com/example</p>
+                <h6>&nbsp Linkdin Profile</h6>
+                <p>&nbsp lnkdin.com/example</p>
+
+                <h5 id='head'>&nbsp Skills</h5>
+                    <p>&nbsp &nbsp HTML</p>
+                    <p>&nbsp &nbsp CSS</p>
+                    <p>&nbsp &nbsp JavaScript</p>
+                    <p>&nbsp &nbsp Django</p>
+                
+                <h5 id='head'>&nbsp Interests</h5>
+                    <p>&nbsp &nbsp Reading</p>
+                    <p>&nbsp &nbsp Cricket</p>
+                    <p>&nbsp &nbsp Chess</p>
+                    <p>&nbsp &nbsp Travelling</p>
+
+            </div>
+            <div class="main" id="main">
+                <p id="qul">
+                    I am Machine Learning engineer working in the field of AI, ML and
+                    DL. I have proefficiency in various Machine Learning algorithms as 
+                    well as lot of work on production level ML and deployment of model.
+                    I have also worked in field of Full Stack Web development with Django
+                    and Core frontend.
+                </p>
+                <hr id="up1">
+                <h5 id='mainhead'>Education</h5>
+                <hr id="down1">
+                <table id="table">
+                    <tr>
+                        <td class="year" id="cell">2010-2014</td>
+                        <td id="cell">Computer Engineering, B.Tech.<br>Pandit Deendayal Energy University</td>
+                    </tr>
+                    <tr>
+                        <td class="year" id="cell">2015-2017</td>
+                        <td id="cell">Machine Learning, M.S.<br>Stanford University</td>
+                    </tr>
+                </table>
+
+                <hr id="up2">
+                <h5 id="mainhead">Work Experience</h5>
+                <hr id="down2">
+                <table id="table">
+                    <tr>
+                        <td class="year" id="cell">2017-2019</td>
+                        <td id="cell"><b>Machine Learning Engineer at QuarkAI</b>
+                            <br>
+                            <ul>
+                                <li>Made new ML Model</li>
+                                <li>Trained existing systems with
+                                    better approach for process optimization and
+                                    trained with custom dataset. 
+                                </li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="year" id="cell">2019-2021</td>
+                        <td id="cell"><b>Machine Learning Researcher at CapitalML</b>
+                            <br>
+                            <ul>
+                                <li>Made ML Model to work with financial data 
+                                    taken from API and trained in more resource optimized way than
+                                    done earlier.
+                                </li>
+                                <li>Created web application and deployed
+                                    ML model on web.
+                                </li>
+                            </ul>
+                        </td>
+                    </tr>
+                </table>
+                <hr id="up3">
+                <h5 id="mainhead">Projects</h5>
+                <hr id="down3">
+                <ul id='prjct'>
+                    <li>Created Amazon Scrapper API using Django</li>
+                    <li>Created Self Driving Algorithm using Deep Learning</li>
+                    <li>Created Stock Market Prediction Algorithm using ML and deployed on web</li>
+                </ul>
+                <hr id="up4">
+                <h5 id="mainhead">Certificates and Membership</h5>
+                <hr id="down4">
+                <ul id='prjct'>
+                    <li>DL certification from AI Bootcamp</li>
+                    <li>Member at Google Student Developer Club</li>
+                    <li>Contributed in Open Source projects on Github</li>
+                </ul>
+            </div>
+        </div>
+        <div>
+            <a href="./content.html">
+                <button type="submit" id='next'>Next</button>
+            </a>
+        </div>
+    </div>
+     <style>
+         body{
+             background: rgb(14,20,10);
+         }
+         h1{
+             font-size: 82px;
+             margin-bottom: 0;
+         }
+         .cnt{
+            float: right;
+            width: 50%;
+            height: 100%; 
+         }
+         .intro{
+            float: left;
+            font-family: 'Patrick Hand SC', cursive;
+            color: white;
+            font-size: 72px;
+            width: 50%;
+            flex: left;
+         }
+         h3{
+            text-align: center;
+            font-family: 'Otomanopee One', sans-serif;
+            color: white;
+            margin-bottom: 3px;
+         }
+         #head{
+            overflow: hidden;
+            font-size: 11px;
+            color: white;
+            font-family: 'PT Sans', sans-serif;
+            background: #192734;
+            margin-bottom: 0;
+         }
+         #main{
+             display: float;
+             position: float-left;
+             height: 100%;
+             width: 67%;
+         }
+         #up1{
+             margin: 5px 2px 0px 6px;
+             height: 1px;
+             background-color: black;
+             border: none; 
+             opacity: 0.3;
+         }
+         #down1{
+             margin: 1px 2px 2px 6px;
+             height: 1px;
+             background-color: black;
+             border: none; 
+             opacity: 0.3;
+         }
+         #up2{
+             margin: 0px 2px 0px 6px;
+             height: 1px;
+             background-color: black;
+             border: none; 
+             opacity: 0.3;
+         }
+         #down2{
+             margin: 1px 2px 2px 6px;
+             height: 1px;
+             background-color: black;
+             border: none; 
+             opacity: 0.3;
+         }
+         #up3{
+             margin: 5px 2px 0px 6px;
+             height: 1px;
+             background-color: black;
+             border: none; 
+             opacity: 0.3;
+         }
+         #down3{
+             margin: 1px 2px 2px 6px;
+             height: 1px;
+             background-color: black;
+             border: none; 
+             opacity: 0.3;
+         }
+         #up4{
+             margin: 5px 2px 0px 6px;
+             height: 1px;
+             background-color: black;
+             border: none; 
+             opacity: 0.3;
+         }
+         #down4{
+             margin: 1px 2px 2px 6px;
+             height: 1px;
+             background-color: black;
+             border: none; 
+             opacity: 0.3;
+         }
+         h6{
+             margin-top: 3px;
+             color: white;
+             font-size: 8px;
+             margin-bottom: 3px;
+             font-family: 'PT Sans', sans-serif;
+         }
+         p{
+             color: white;
+             font-size: 7px;
+             margin: 3px 0 3px 0;
+             font-family: 'PT Sans', sans-serif;
+         }
+         a{
+             text-decoration: none;
+         }
+         .colors{
+             display: flex;
+             justify-content: center;
+         }
+         input[type=radio]{
+             cursor: pointer;
+             width: 50px;
+             height: 40px;
+             border: 2px solid white;
+             padding: 0.5em;
+             -webkit-appearance: none;
+         }
+         input[type=radio]:first-child{
+             background: #164d56;
+         }
+         input[type=radio]:nth-child(2){
+             background: #3a2229;
+         }
+         input[type=radio]:nth-child(3){
+             background: #56565a;
+         }
+         input[type=radio]:nth-child(4){
+             background: #1261a0;
+         }
+         .resume{
+             overflow: hidden;
+             display: flex;
+             margin: 0 auto 0 auto;
+             margin-top: 2%;
+             height: 451px;
+             width: 320px;
+             background: #fff;
+         }
+         #side{
+             width: 33%;
+             height: 100%;
+             background: #164d56;
+         }
+         h4{
+             overflow: hidden;
+             font-size: 12px;
+             color: white;
+             font-family: 'PT Sans', sans-serif;
+         }
+         #next{
+             width: 80px;
+             height: 30px;
+             line-height: 1;
+             display: flex;
+             margin: 8px auto 0 auto;
+             padding-top: 7px;
+             justify-content: center;
+             background: rgb(14,20,10);
+             color: #19bc8b;
+             transition-duration: 250ms; 
+             border: 2px solid;
+             box-shadow: 
+                    0.3em 0.3em 0 0 #19bc8b,
+                    inset 0.3em 0.3em 0 0 #19bc8b;
+         }
+         #next:hover{
+            cursor: pointer;
+            transform: scale(1.1);
+            background: #19bc8b;
+            color: rgb(14,20,10);  
+            }
+         #qul{
+             font-family: 'PT Sans', sans-serif;
+             color: black;
+             margin: 20px 4px 0 6px;
+             text-align: justify;
+         }
+         #mainhead{
+            padding: 0px 0 0px 0;
+            font-size: 11px;
+            font-family: 'PT Sans', sans-serif;
+            margin: 0px 4px 0 6px;
+         }
+        #table{
+            margin: 0px 6px 0 3px;
+            width: 100%;
+            height: 15%;
+            font-family: 'PT Sans', sans-serif;
+            font-size: 7px;
+        }
+        ul{
+            margin: 0;
+            padding: 0 0 0 15px;
+        }  
+        #cell{
+            vertical-align: top;
+        }
+        .year{
+            width: 20%;
+        }
+        #prjct{
+            font-size: 7px;
+            font-family: 'PT Sans', sans-serif;
+            margin: 5px 4px 0 6px;
+
+        } 
+     </style>
+    <script src="./content.js"></script>
+</body>
+</html>
